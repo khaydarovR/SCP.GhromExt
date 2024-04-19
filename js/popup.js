@@ -8,7 +8,7 @@ function tryLoadToken() {
   const oldToken = localStorage.getItem("bos-token");
   if (oldToken) {
     tok.value = oldToken;
-    console.log("token loaded from ls");
+    console.log("token loaded from localstorage");
   }
 }
 
@@ -69,7 +69,7 @@ function getRecFromApi(forRes) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: t,
+      "Authorization": t,
       "For-Res": forRes,
     },
     //JSON.stringify({key1: 'value1', key2: 'value2'})
